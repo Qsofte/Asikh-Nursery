@@ -29,7 +29,7 @@ function App() {
           <Route path="/termofuse" element={<TermOfUse />} />
           {/* <Route path="/socialmedialinks" element={<SocialMediaLinks />} /> */}
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
     </>
   );

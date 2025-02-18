@@ -16,7 +16,10 @@ import ShatavariPlant from "../ImageProducts/ShatavariPlant.jpeg";
 import Adenium from "../ImageProducts/Adenium.jpg";
 import CrotonPetra from "../ImageProducts/CrotonPetra.jpg";
 import FicusTapori from "../ImageProducts/FicusTapori.jpg";
-// import MorpankhiJhau from "../ImageProducts/MorpankhiJhau.jpg";
+import AmrudhChineseGreen from "../ImageProducts/AmrudhChineseGreen.jpg";
+import AmrudhPunjab from "../ImageProducts/AmrudhPunjab.jpg";
+import CoconutDesi from "../ImageProducts/CoconutDesi.jpg";
+import MorpankhiJhau from "../ImageProducts/MorpankhiJhau.jpg";
 
 const products = [
   {
@@ -196,8 +199,8 @@ const products = [
   {
     id: 30,
     name: "AMRUDH CHINESE GREEN",
-    price: 0,
-    image: ShatavariPlant,
+    price: 120,
+    image: AmrudhChineseGreen,
   },
   {
     id: 31,
@@ -208,8 +211,8 @@ const products = [
   {
     id: 32,
     name: "AMRUDH PUNJAB",
-    price: 0,
-    image: ShatavariPlant,
+    price: 100,
+    image: AmrudhPunjab,
   },
   {
     id: 33,
@@ -472,8 +475,8 @@ const products = [
   {
     id: 77,
     name: "COCONUT DESI",
-    price: 0,
-    image: ShatavariPlant,
+    price: 250,
+    image: CoconutDesi,
   },
   {
     id: 78,
@@ -529,30 +532,216 @@ const products = [
     price: 0,
     image: ShatavariPlant,
   },
-  // {
-  //   id: 87,
-  //   name: "Morpankhi (Jhau)",
-  //   price: 100,
-  //   image: MorpankhiJhau,
-  // },
-  // {
-  //   id: 88,
-  //   name: "Shatavari Plant",
-  //   price: 0,
-  //   image: ShatavariPlant,
-  // },
-  // {
-  //   id: 89,
-  //   name: "Shatavari Plant",
-  //   price: 0,
-  //   image: ShatavariPlant,
-  // },
-  // {
-  //   id: 90,
-  //   name: "Shatavari Plant",
-  //   price: 0,
-  //   image: ShatavariPlant,
-  // },
+  {
+    id: 87,
+    name: "Morpankhi (Jhau)",
+    price: 100,
+    image: MorpankhiJhau,
+  },
+  {
+    id: 88,
+    name: "DECO 9 VIPIN",
+    price: 0,
+    image: ShatavariPlant,
+  },
+  {
+    id: 89,
+    name: "DESI LILY",
+    price: 0,
+    image: ShatavariPlant,
+  },
+  {
+    id: 90,
+    name: "DIEFFENBACHIA",
+    price: 0,
+    image: ShatavariPlant,
+  },
+  {
+    id: 91,
+    name: "DRACAENA GREEN",
+    price: 0,
+    image: ShatavariPlant,
+  },
+  {
+    id: 92,
+    name: "DRACAENA MIX",
+    price: 0,
+    image: ShatavariPlant,
+  },
+  {
+    id: 93,
+    name: "DWARF RED NERIUM",
+    price: 0,
+    image: ShatavariPlant,
+  },
+  {
+    id: 90,
+    name: "DWARF WHITE NERIUM",
+    price: 0,
+    image: ShatavariPlant,
+  },
+  {
+    id: 90,
+    name: "Shatavari Plant",
+    price: 0,
+    image: ShatavariPlant,
+  },
+  {
+    id: 90,
+    name: "Shatavari Plant",
+    price: 0,
+    image: ShatavariPlant,
+  },
+  {
+    id: 90,
+    name: "Shatavari Plant",
+    price: 0,
+    image: ShatavariPlant,
+  },
+  {
+    id: 90,
+    name: "Shatavari Plant",
+    price: 0,
+    image: ShatavariPlant,
+  },
+  {
+    id: 90,
+    name: "Shatavari Plant",
+    price: 0,
+    image: ShatavariPlant,
+  },
+  {
+    id: 90,
+    name: "Shatavari Plant",
+    price: 0,
+    image: ShatavariPlant,
+  },
+  {
+    id: 90,
+    name: "Shatavari Plant",
+    price: 0,
+    image: ShatavariPlant,
+  },
+  {
+    id: 90,
+    name: "Shatavari Plant",
+    price: 0,
+    image: ShatavariPlant,
+  },
+  {
+    id: 90,
+    name: "Shatavari Plant",
+    price: 0,
+    image: ShatavariPlant,
+  },
+  {
+    id: 90,
+    name: "Shatavari Plant",
+    price: 0,
+    image: ShatavariPlant,
+  },
+  {
+    id: 90,
+    name: "Shatavari Plant",
+    price: 0,
+    image: ShatavariPlant,
+  },
+  {
+    id: 90,
+    name: "Shatavari Plant",
+    price: 0,
+    image: ShatavariPlant,
+  },
+  {
+    id: 90,
+    name: "Shatavari Plant",
+    price: 0,
+    image: ShatavariPlant,
+  },
+  {
+    id: 90,
+    name: "Shatavari Plant",
+    price: 0,
+    image: ShatavariPlant,
+  },
+  {
+    id: 90,
+    name: "Shatavari Plant",
+    price: 0,
+    image: ShatavariPlant,
+  },
+  {
+    id: 90,
+    name: "Shatavari Plant",
+    price: 0,
+    image: ShatavariPlant,
+  },{
+    id: 90,
+    name: "Shatavari Plant",
+    price: 0,
+    image: ShatavariPlant,
+  },
+  {
+    id: 90,
+    name: "Shatavari Plant",
+    price: 0,
+    image: ShatavariPlant,
+  },
+  {
+    id: 90,
+    name: "Shatavari Plant",
+    price: 0,
+    image: ShatavariPlant,
+  },
+  {
+    id: 90,
+    name: "Shatavari Plant",
+    price: 0,
+    image: ShatavariPlant,
+  },
+  {
+    id: 90,
+    name: "Shatavari Plant",
+    price: 0,
+    image: ShatavariPlant,
+  },
+  {
+    id: 90,
+    name: "Shatavari Plant",
+    price: 0,
+    image: ShatavariPlant,
+  },
+  {
+    id: 90,
+    name: "Shatavari Plant",
+    price: 0,
+    image: ShatavariPlant,
+  },
+  {
+    id: 90,
+    name: "Shatavari Plant",
+    price: 0,
+    image: ShatavariPlant,
+  },
+  {
+    id: 90,
+    name: "Shatavari Plant",
+    price: 0,
+    image: ShatavariPlant,
+  },
+  {
+    id: 90,
+    name: "Shatavari Plant",
+    price: 0,
+    image: ShatavariPlant,
+  },
+  {
+    id: 90,
+    name: "Shatavari Plant",
+    price: 0,
+    image: ShatavariPlant,
+  },
+
 ];
 
 function OrderNow() {
@@ -580,7 +769,7 @@ function OrderNow() {
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search..."
+          placeholder="Search Your Product"
           className="search-input"/>
 
         {/* <button className="search-button">

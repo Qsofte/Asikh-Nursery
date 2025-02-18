@@ -1,181 +1,94 @@
-@media only screen and (max-width: 480px) {
-
-  *{
-    margin: 0;
-    padding: 0;
-  }
-  
-  .img-main{
-    background-image: url("../images/img3.jfif");
-    height: 100vh;
-    background-repeat: no-repeat; 
-    width: 100%;
-  }
-
-  #txt{
-    color: aliceblue;
-  }
-
-  .clrpag {
-    width: 100%;
-    height: 90vh;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .txtnm {
-    width: 100%;
-    flex-wrap: wrap;
-    text-align: center;
-  }
-
-  .smlimg {
-    border: 2px solid rgb(122, 141, 94);
-    padding: 1em;
-    max-width: 100%;
-    height: 15em;
-    margin-top: 20%;
-    margin-bottom: 5%;
-    width: 50%;
-    height: auto;
-  }
-
-  /* Plant Care */
-
-  .plntpag {
-    height: 100vh;
-    background: linear-gradient(90deg, rgba(8, 234, 8, 0.46), rgba(202, 230, 21, 0.362));
-    display: flex;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  .headP{
-    margin-top: 10%;
-  }
-
-  .animatePtxt{
-    margin-top: 20%;
-    width: 100%;
-    text-align: center;
-    text-wrap: wrap;
-  }
-
-  .smlimgP {
-    display: none;
-  }
-
-  .plntpag2 {
-    height: 100%;
-  }
-
-  .smlimgP2 {
-    display: none;
-  }
-
-  .animatePtxt2 {
-    text-align: center;
-  }
-
-  /* About us */
-
-  .cntnt {
-    width: 100%;
-    height: 70vh;
-    background-color: rgba(34, 34, 32, 0.659);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .Ab-main2 {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background: linear-gradient(90deg, rgba(73, 60, 19, 0.599), rgba(151, 64, 10, 0.437));
-    width: 100%;
-    height: 100vh;
-    flex-direction: column;
-  }
-
-  .abimg-1{
-    width: 100%;
-    border: none;
-    border: 1px solid rgb(195, 255, 0);
-    border-radius: 20px;
-  }
-
-  .abimg-2{
-    width: 100%;
-    border: 1px solid rgb(195, 255, 0);
-    border-radius: 20px;
-  }
-
-  /* Contact Us */
-
-.cntct-main {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-}
-
-.address{
-    width: 100%;
-    text-align: center;
-}
-
-.map-img-link{
-  width: 23em;
-  height: 250px;
-  margin: 0;
-  padding: 0;
-}
-}
-
-/* whatsapp */
-/* Tablet styles (768px to 1024px) */
 @media (max-width: 1024px) {
-  .head {  
-    padding: 10px;
-    font-size: 18px;
+  .img-main {
+    width: 100%;
+  }
+  .hd-txt1 {
+    font-size: 24px;
+    width: 22rem;
+    line-height: 1.3;
+    margin-top: 5rem;
+  }
+  .para-txt2 {
+    font-size: 10px;
   }
 
-  .whatsapp-link {
-    font-size: 96px;
+  .btn {
+    white-space: nowrap;
+    font-size: 14px;
+    color: #FFFFFF; 
+    padding: 10px 70px;  
   }
 
-  .whatsapp-logo {
-    width: 80px;
-    height: 80px;
+  .wts{
+    display: none;
+  }
+
+  .knw{
+    border: 4px solid #A0AF4C;
+    background: #00000000;
   }
 }
 
-/* Mobile styles (less than 768px) */
 @media (max-width: 768px) {
-  .head-whts {
+  .img-main {
+    width: 100%;
+  }
+  .hd-txt1 {
+    font-size: 24px;
+    width: 22rem;
+    line-height: 1.3;
+    margin-top: 5rem;
+  }
+  .para-txt2 {
+    font-size: 10px;
+  }
+  .buttons1 {
     flex-direction: column;
-    padding: 8px;
-    font-size: 16px;
   }
 
-  .whatsapp-link {
-    font-size: 40px;
+  .btn {
+    white-space: nowrap;
+    font-size: 14px;
+    color: #FFFFFF; 
+    padding: 10px 70px;  
   }
 
-  .whatsapp-logo {
-    width: 78px;
-    height: 78px;
+  .wts{
+    display: none;
   }
 
-  nav {
-    flex-direction: column;
-    text-align: center;
+  .knw{
+    border: 4px solid #A0AF4C;
+    background: #00000000;
+  }
+}
+
+@media (max-width: 480px) {
+  .img-main {
+    width: 100%;
+  }
+  .hd-txt1 {
+    font-size: 24px;
+    width: 22rem;
+    line-height: 1.3;
+    margin-top: 5rem;
+  }
+  .para-txt2 {
+    font-size: 10px;
+  }
+  .btn {
+    white-space: nowrap;
+    font-size: 14px;
+    color: #FFFFFF; 
+    padding: 10px 70px;  
   }
 
-  nav a {
-    padding: 10px 0;
+  .wts{
+    display: none;
+  }
+
+  .knw{
+    border: 4px solid #A0AF4C;
+    background: #00000000;
   }
 }
