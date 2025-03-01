@@ -1,42 +1,38 @@
 .header {
-  background-color: #293a21;
-  padding: 10px 20px;
+  width: auto;
+  height: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  position: fixed;  
-  top: 0;           
-  box-sizing: border-box;
-  width: 100%;      
-  z-index: 1000;
+  padding: 10px 20px;
+  background-color: #293a21; 
+  position: relative;
 }
+
+/* Logo */
 
 .logo-img {
-  width: 60px;
-  height: auto;
-  margin-right: 10px;
-  
+  width: 70px; 
 }
 
+/* Navigation Links */
+
 .nav-links {
-  display: flex; 
+  display: flex;
   gap: 20px;
-  margin-left: 50px;
 }
 
 .sections {
-  color: wheat;
+  color: white;
   text-decoration: none;
-  font-size: 18px;
-  /* font-family: gilroy; */
+  font-size: 16px;
 }
 
 .sections:hover {
-  color: #00000059;
+  color: #ddd;
 }
 
-/*For Smaller Screen */
-/* 
-.head-address {
-  display: none;
+/* WhatsApp Button 
+.whatsapp-btn img {
+  width: 40px;
 } */
