@@ -210,5 +210,40 @@
     width: 50%;
     padding: 8px 15px;
   }
+
+  /* About Us */
+
+  /* First Section */
+
+  .abt-img1 img {
+    width: 25.9rem;
+    height: 13.81rem;
+    display: block;
+  }
+
+ .abt-para1 {
+  font-size: 24px;
+  font-weight: bold;
+ }
+
+ /* Second / Third Section */
+
+ .abt-2, .abt-img3 img {
+  width: 25.9rem;
+  height: 8.87rem;
+ }
+
+ .abt-img2 img {
+  width: 13.42rem;
+  height: 8.87rem;
+ }
+
+ .abt-content h2 {
+  font-size: 12.85px;
+ }
+
+ .abt-content p {
+  font-size: 8.56px;
+ }
 }
 

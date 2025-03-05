@@ -222,6 +222,7 @@
 .plt-care-btn1 button:hover, .plt-care-btn2 button:hover {
   background-color: #d9534f;
 }
+
   /*About Us*/
 
   /* First Section */
@@ -238,8 +239,8 @@
   }
   
   .abt-img1 img {
-    width: 100%;
-    height: auto;
+    width: 1519px;
+    height: 600px;
   }
   
   .abt-para1 {
@@ -301,17 +302,17 @@
     flex-direction: row-reverse;
   }
   
-  .abt-img2 img,
-  .abt-img3 img {
+  .abt-img2 img {
     width: 100%;
     height: auto;
+  }
+
+  .abt-img3 img {
+    width: 1519px;
+    height: 529px;
   }
   
   .abt-content {
     width: 50%;
     padding: 20px;
   }
-/*   
-  .abt-bg {
-    background-color: #d0f0d0;
-  } */
