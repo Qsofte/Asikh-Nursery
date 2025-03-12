@@ -30,11 +30,11 @@ jobs:
       - name: Install sshpass
         run: sudo apt-get update && sudo apt-get install -y sshpass
 
-      # Step 6: Deploy to Remote Server with Cleanup on Space Error
+      # Step 6: Deploy to Remote Server with Cleanup & Port Fix
       - name: Deploy to Server
         run: |
           sshpass -p "${{ secrets.SERVER_PASSWORD }}" ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }} <<EOF
-          
+
           # Try pulling the latest image
           if ! docker pull amanqsofte/asikh:latest; then
             echo "⚠️ Docker pull failed. Cleaning up space..."
@@ -47,6 +47,12 @@ jobs:
           if [ "$(docker ps -q -f name=modest_lalande)" ]; then
             docker stop modest_lalande
             docker rm modest_lalande
+          fi
+
+          # Free up port 80 if it's occupied
+          if sudo lsof -i :80 | grep LISTEN; then
+            echo "⚠️ Port 80 is in use. Freeing it..."
+            sudo fuser -k 80/tcp
           fi
 
           # Run new container
