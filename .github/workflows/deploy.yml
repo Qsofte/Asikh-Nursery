@@ -26,15 +26,22 @@ jobs:
       - name: Push Docker Image
         run: docker push amanqsofte/asikh:latest
 
-      # Step 5: Install sshpass (Fix for missing dependency)
+      # Step 5: Install sshpass
       - name: Install sshpass
         run: sudo apt-get update && sudo apt-get install -y sshpass
 
-      # Step 6: Deploy to Remote Server
+      # Step 6: Deploy to Remote Server with Cleanup on Space Error
       - name: Deploy to Server
         run: |
           sshpass -p "${{ secrets.SERVER_PASSWORD }}" ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }} <<EOF
-          docker pull amanqsofte/asikh:latest
+          
+          # Try pulling the latest image
+          if ! docker pull amanqsofte/asikh:latest; then
+            echo "⚠️ Docker pull failed. Cleaning up space..."
+            docker system prune -a -f
+            docker volume prune -f
+            docker pull amanqsofte/asikh:latest
+          fi
           
           # Stop and remove old container if running
           if [ "$(docker ps -q -f name=modest_lalande)" ]; then
