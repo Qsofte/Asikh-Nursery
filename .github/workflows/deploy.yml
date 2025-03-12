@@ -10,51 +10,41 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout Code
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      # Step 2: Log in to Docker Hub
       - name: Log in to Docker Hub
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
 
-      # Step 3: Build Docker Image
       - name: Build Docker Image
         run: docker build -t amanqsofte/asikh:latest .
 
-      # Step 4: Push Docker Image to Docker Hub
       - name: Push Docker Image
         run: docker push amanqsofte/asikh:latest
 
-      # Step 5: Install sshpass
       - name: Install sshpass
         run: sudo apt-get update && sudo apt-get install -y sshpass
 
-      # Step 6: Deploy to Remote Server with Cleanup & Port Fix
       - name: Deploy to Server
         run: |
           sshpass -p "${{ secrets.SERVER_PASSWORD }}" ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }} <<EOF
-
-          # Try pulling the latest image
-          if ! docker pull amanqsofte/asikh:latest; then
-            echo "⚠️ Docker pull failed. Cleaning up space..."
-            docker system prune -a -f
-            docker volume prune -f
-            docker pull amanqsofte/asikh:latest
-          fi
           
-          # Stop and remove old container if running
-          if [ "$(docker ps -q -f name=modest_lalande)" ]; then
+          echo "✅ Checking running Docker containers..."
+          
+          # Stop & remove old container if it exists
+          if docker ps -a --format '{{.Names}}' | grep -q "modest_lalande"; then
+            echo "⚠️ Removing existing container..."
             docker stop modest_lalande
             docker rm modest_lalande
           fi
 
-          # Free up port 80 if it's occupied
-          if sudo lsof -i :80 | grep LISTEN; then
-            echo "⚠️ Port 80 is in use. Freeing it..."
-            sudo fuser -k 80/tcp
-          fi
+          echo "✅ Pulling latest Docker image..."
+          docker pull amanqsofte/asikh:latest
 
-          # Run new container
+          echo "✅ Freeing up port 80 if occupied..."
+          sudo -S fuser -k 80/tcp <<< "${{ secrets.SERVER_PASSWORD }}"
+
+          echo "✅ Running new container..."
           docker run -d --name modest_lalande -p 80:5000 amanqsofte/asikh:latest
+          
           EOF
