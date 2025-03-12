@@ -33,16 +33,16 @@ jobs:
           
           # Stop & remove old container if it exists
           if docker ps -a --format '{{.Names}}' | grep -q "modest_lalande"; then
-            echo "⚠️ Removing existing container..."
-            docker stop modest_lalande
-            docker rm modest_lalande
+            echo "⚠️ Stopping and removing existing container..."
+            docker stop modest_lalande || true
+            docker rm -f modest_lalande || true
           fi
+
+          echo "✅ Checking for any process using port 80..."
+          sudo fuser -k 80/tcp || true
 
           echo "✅ Pulling latest Docker image..."
           docker pull amanqsofte/asikh:latest
-
-          echo "✅ Freeing up port 80 if occupied..."
-          sudo -S fuser -k 80/tcp <<< "${{ secrets.SERVER_PASSWORD }}"
 
           echo "✅ Running new container..."
           docker run -d --name modest_lalande -p 80:5000 amanqsofte/asikh:latest
