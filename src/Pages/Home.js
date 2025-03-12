@@ -1,5 +1,6 @@
 import "./Page.css";
 import "./Responsive.css";
+import Homebg from '../images/Home-pg.jfif';
 import tools from '../images/Tools.png';
 import flowers from '../images/Flower.jpeg';
 import homePic1 from "../images/home-pic-1.jpeg";
@@ -9,24 +10,18 @@ const Home = () => {
   return (
     <>
     <div className="container">
-      <section className="hm-pg">
-        <div className="fst-hm-sec">
-        <div className="img-main">
-          <center className="txt">
-            <h1 className="hd-txt1">Buy Online: Greenery at your finger tips</h1>
-            <p className="para-txt2">
-              Browse, select, and purchase your favourite plant from the comfort of your home
-            </p>
-          </center>
+      <div className="hm-pg">
+        <div className="hm-img-text">
+          <img src={Homebg} alt="Garden" className="hm-bg-img"/>
+          <h1>Buy Online: Greenery at your finger tips</h1>
+          <p>Browse, select, and purchase your favourite plant from the comfort of your home</p>
+          <div className="buttons1">
+          <button className="btn buy-now">Buy Now</button>
+          <button className="btn whatsapp wts">Whatsapp</button>
+          <button className="btn Know-More knw">Know More</button>
         </div>
-
-      <div className="buttons1">
-        <button className="btn buy-now">Buy Now</button>
-        <button className="btn whatsapp wts">Whatsapp</button>
-        <button className="btn Know-More knw">Know More</button>
+        </div>
       </div>
-      </div>
-      </section>
 
       {/* second section */}
 
@@ -46,7 +41,7 @@ const Home = () => {
           </p>
           <p className="para-txtre">Grow your dream garden with tools you can rely on!</p>
           <div className="buttons">
-            <button className="btn buy-now">Buy Now</button>
+            <button className="btn buy-now buy-hg">Buy Now</button>
             <button className="btn learn-more">Learn more</button>
           </div>
         </div>
@@ -61,7 +56,7 @@ const Home = () => {
           </p>
           <p className="para-txtre">From Our Nursery to Your Place.</p>
           <div className="buttons">
-            <button className="btn buy-now">Buy Now</button>
+            <button className="btn buy-now buy-hg">Buy Now</button>
             <button className="btn learn-more">Learn more</button>
           </div>
         </div>

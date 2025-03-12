@@ -1,5 +1,14 @@
 @media (max-width: 768px) {
-    /* Hide nav links by default */
+
+    .logo-text {
+      left: 4%;
+    }
+
+    .logo-text img {
+      width: 3.8rem;
+      height: 3.6rem
+    }
+
     .nav-links {
       display: none;
       flex-direction: column;
@@ -7,7 +16,7 @@
       top: 70px;
       left: 0;
       width: 100%;
-      background-color: #293a21;
+      background-color: white;
       padding: 10px 0;
       text-align: center;
     }
@@ -22,25 +31,31 @@
       display: block;
       padding: 10px;
       font-size: 18px;
-      color: white;
+      color: black;
       text-decoration: none;
     }
-  
+
     .sections:hover {
-      background-color: #3a522d;
+      color: #3f3e3e;
+    }
+
+    .divider {
+      display: none;
     }
   
     /* Burger menu */
     .menu-icon {
       display: flex;
-      flex-direction: column;
-      cursor: pointer;
     }
   
     .bar {
       width: 25px;
       height: 3px;
-      background-color: white;
+      background-color: black;
       margin: 4px 0;
-    }
+    } 
+
+    /* .whatsapp-btn {
+      right: 20px;
+    } */
   }
