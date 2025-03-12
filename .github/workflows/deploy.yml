@@ -34,7 +34,7 @@ jobs:
       - name: Deploy to Server
         run: |
           sshpass -p "${{ secrets.SERVER_PASSWORD }}" ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }} <<EOF
-          docker pull amansofte/asikh:latest
+          docker pull amanqsofte/asikh:latest
           
           # Stop and remove old container if running
           if [ "$(docker ps -q -f name=modest_lalande)" ]; then
