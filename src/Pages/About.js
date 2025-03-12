@@ -28,7 +28,7 @@ const About = () => {
           <img src={aboutImg2} alt="Greenhouse" />
         </div>
         <div className="abt-content">
-          <h2>OUR VISION</h2>
+          <h2>OUR VISIO</h2>
           <p>
             Faucibus rutrum eros in urna blandit faucibus sapien et. Sem pulvinar sit adipiscing blandit.
           </p>
