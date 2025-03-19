@@ -26,7 +26,7 @@
 
 .nav-links {
   display: flex;
-  gap: 10px;
+  gap: 12px;
   position: relative;
   z-index: 1000;
 }
@@ -34,33 +34,64 @@
 .sections {
   color: white;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .sections:hover {
-  color: #c0bfbf;
+  color: white;
+  text-decoration: underline;
 }
 
 .divider {
   color: white; 
+  font-size: 24px;
 }
 
-/* .whatsapp-btn {
+.whatsapp-container {
+  width: 122px;
+  height: 43px;
   position: absolute;
-  right: 20px;
+  right: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+}
+
+.whatsapp-button {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  background-color: #a0af4c;
+  border-radius: 30px;
+  padding: 2px 10px;
+  position: relative;
+}
+
+.whatsapp-text {
+  color: white;
+  font-size: 14px;
+  padding: 5px 20px;
+  padding-left: 5px;
+  font-family: "GilroyMedium";
+}
+
+.whatsapp-icon {
+  width: 35px;
+  height: 35px;
+  background-color: #ffeddf;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #a0af4c;
-  padding: 5px 10px;
-  border-radius: 20px;
-  text-decoration: none;
+  position: absolute;
+  right: -10px;
 }
 
-.whatsapp-btn img {
-  width: 30px;
-  height: 30px;
-} */
+.whatsapp-icon img {
+  width: 43px;
+  height: 43px;
+}
 
 .menu-icon {
   display: none;

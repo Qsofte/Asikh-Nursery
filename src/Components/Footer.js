@@ -1,13 +1,16 @@
 import './Footer.css';
+import flower from "../images/Flower.png";
 
 function Footer () {
   return (
     <>
     <footer className="footer">
-      <div>
-        Box
-        <img src='' alt=''></img>
+
+      <div className="footer-banner">
+        <div className="yellow-box"></div>
+        <img className="footer-banner-img" src={flower} alt="Plants" />
       </div>
+
       <div className="footer-logo">
         <img src='./static/media/logo.7aeaf2ffaf713a014561.png' alt=''></img>
       </div>
@@ -21,9 +24,9 @@ function Footer () {
 
       <div className="footer-help">
         <h3 className='Help-txt'>Help</h3>
-        <a href="/about">Terms & Condition</a>
-        <a href="/about">Privacy Policy</a>
-        <a href="/about">Contact Us</a>
+        <a href="/terms">Terms & Condition</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/contact">Contact Us</a>
       </div>
       
       <div className="footer-social">

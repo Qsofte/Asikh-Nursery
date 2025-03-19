@@ -21,12 +21,10 @@
       text-align: center;
     }
   
-    /* Show nav when menu is open */
     .nav-links.open {
       display: flex;
     }
-  
-    /* Each nav item styling */
+
     .sections {
       display: block;
       padding: 10px;
@@ -43,7 +41,6 @@
       display: none;
     }
   
-    /* Burger menu */
     .menu-icon {
       display: flex;
     }
@@ -55,7 +52,28 @@
       margin: 4px 0;
     } 
 
-    /* .whatsapp-btn {
-      right: 20px;
+    /* .whatsapp-container {
+      display: none;
     } */
+
+    .whatsapp-text {
+      display: none;
+    }
+
+    .whatsapp-icon {
+      position: fixed;
+      bottom: 30px; 
+      right: 30px; 
+      padding: 11.72px; 
+      z-index: 1000;
+      width: 56px;
+      height: 56px;
+    }
+
+    .whatsapp-icon img {
+      width: 80px;
+      height: 80px;
+    }
+
+
   }

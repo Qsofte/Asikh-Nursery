@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Head.css";
 import "./Resp.css";
 import logo from "../Logo/logo.png";
+import whatsappIcon from "../images/Whatsapp.png";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,17 +26,28 @@ function Header() {
         <a className="sections" href="/contact">Contact Us</a>
       </nav>
 
-      {/* <a href="https://wa.me/your-number" className="whatsapp-btn">
-        <img src={whatsappIcon} alt="WhatsApp" />
-      </a> */}
+      <div className="whatsapp-container">
+        <a
+          href="https://wa.me/917519935805?text=Hello, I’m interested in exploring more about the products and services offered by Asikh Nursery."
+          className="whatsapp-button">
+          <span className="whatsapp-text">WhatsApp</span>
+          <span className="whatsapp-icon">
+            <img src={whatsappIcon} alt="WhatsApp" />
+          </span>
+        </a>
+      </div>
+ 
+      {/* <div className="whatsapp-icon-mob">
+        <a href= "https://wa.me/917519935805?text=Hello, Hello, I’m interested in exploring more about the products and services offered by Asikh Nursery.">
+          <img src={whatsappIcon} alt="WhatsApp" />
+        </a>
+      </div> */}
 
       <div className="menu-icon" onClick={() => setIsOpen(!isOpen)}>
         <span className="bar"></span>
         <span className="bar"></span>
         <span className="bar"></span>
       </div>
-
-
     </div>
   );
 };
