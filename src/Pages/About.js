@@ -99,7 +99,7 @@ const About = () => {
         {/* Our Vision & Our Mission */}
         <div className="content-grid">
           <section>
-            <h2 className="section-title">Our Vision</h2>
+            <h2 className="section-title abt_head1">Our Vision</h2>
             <p>
               Fruits from his farms—sent as a token of blessings, good wishes, and gratitude—to loved ones abroad and the local community that cares for them in foreign lands. A simple act of kindness, rooted in tradition, carried across borders.
             </p>
@@ -116,7 +116,7 @@ const About = () => {
           </section>
           
           <section className="abt-mission">
-            <h2 className="section-title abt_head">Our Mission</h2>
+            <h2 className="section-title abt_head2">Our Mission</h2>
             <p className="abt_para">
               Fruits from his farms—sent as a token of blessings, good wishes, and gratitude—to loved ones abroad and the local community that cares for them in foreign lands. A simple act of kindness, rooted in tradition, carried across borders.
             </p>
