@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./Components/Header";
-// import Footer from "./Components/Footer";
+import Footer from "./Components/Footer";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Plant from "./Pages/Plant";
@@ -29,7 +29,7 @@ function App() {
           <Route path="/termofuse" element={<TermOfUse />} />
           {/* <Route path="/socialmedialinks" element={<SocialMediaLinks />} /> */}
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </BrowserRouter>
     </>
   );

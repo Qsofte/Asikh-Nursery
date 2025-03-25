@@ -223,15 +223,15 @@
   }
 
   .hm-img-text h1 {
-    width: 80%;
+    width: 90%;
     font-size: 24px;
     font-family: "GilroySemiBold";
   }
 
   .hm-img-text p {
-    width: 90%;
+    width: 100%;
     font-size: 10px;
-    left: 45%;
+    left: 50%;
     font-family: "GilroyRegular";
   }
 
@@ -425,7 +425,6 @@
     margin-top: 1rem;
   }
 
-
   /* .abt-mission  {
    
   } */
@@ -462,7 +461,109 @@
  .abt-content p {
   font-size: 8.56px;
  } */
-} 
 
-/* Our Services */
 
+/* Contact us*/
+
+  .contact-container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+
+  .contact-head {
+    display: block;
+    font-size: 32px;
+    font-family: "GilroySemiBold";
+  }
+
+  .contact-box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    background: none;
+  }
+
+  .contact-form{
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+  }
+
+  .contact-form label {
+    font-size: 14px;
+    font-family: "gilroyregular";
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    background-color: #A0AF4C;
+    color: black;
+    font-size: 14px;
+    font-family: "gilroyregular";
+    cursor: pointer;
+  }
+
+  .submit-btn:hover {
+    background-color: #919d4e;
+  }
+
+  .contact-map {
+    width: 100%;
+  }
+
+  .contact-map iframe {
+    width: 20rem;
+    height: 18rem;
+  }
+
+  .contact-address{
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+    margin: auto;
+  }
+
+  .contact-address div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .contact-address svg {
+    width: 44px;
+    height: 44px;
+  }
+
+  .contact-add,
+  .contact-phone,
+  .contact-timing {
+    font-size: 14px;
+    font-family: "gilroymedium";
+  }
+
+  /* Our Services */
+
+  .img-0 { width: 100%; height: 370px; }
+  .img-1 { width: 100%; height: 520px; }
+  .img-2 { width: 100%; height: 520px; }
+  .img-3 { width: 100%; height: 650px; }
+  .img-4 { width: 100%; height: 770px; }
+
+  .service-title {
+    font-size: 24px;
+  }
+
+  .service-description, .know-more {
+    font-size: 18px;
+  }
+
+}

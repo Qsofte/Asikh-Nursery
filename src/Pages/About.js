@@ -4,7 +4,7 @@ import "./Page.css";
 // import aboutImg3 from "../images/About-img3.jpeg";
 // import aboutImg4 from "../images/About-img4.png";
 // import { Link } from "react-router-dom";
-import about_header from "../images/service_ home.jfif";
+import about_header from "../images/about_header.jfif";
 import about_footer from "../images/service_garden.jfif";
 import About_Pot from "../images/About_Pot.jpeg";
 import About_plant from "../images/About_plant.jpeg";
@@ -71,7 +71,7 @@ const About = () => {
           <Link to="/">Home</Link> &gt; <span>About Us</span>
         </p>
         </div> */}
-        {/* Header Image */}
+        
         <img src= {about_header} alt="Garden" className="header-image" />
         
         {/* Our Story Section */}
