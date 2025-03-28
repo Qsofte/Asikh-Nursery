@@ -1,4 +1,5 @@
 import './Footer.css';
+import './Resp.css';
 import flower from "../images/Flower.png";
 import whatsapp from "../Logo/WhatsApp.png";
 import instagram from "../Logo/Insta.png";
@@ -44,7 +45,7 @@ function Footer() {
         
         {/* Social Media Links */}
         <div className="footer-social">
-          <h3>Follow us on</h3>
+          <h3 style={{display: 'none'}}>Follow us on</h3>
           <div className="social-icons">
             <a href="https://wa.me/" target="_blank" rel="noopener noreferrer">
               <img src={whatsapp} alt="WhatsApp" />

@@ -7,6 +7,8 @@ import whatsappIcon from "../images/Whatsapp.png";
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
+  console.log("Header component rendered!");
+
   return (
     <div className="header">
       {/* Logo */}
@@ -16,14 +18,16 @@ function Header() {
 
       <nav className={`nav-links ${isOpen ? "open" : ""}`}>
         <a className="sections" href="/home">Home</a>
-        <span className="divider">|</span>
+        <span className="divider">|</span> 
         <a className="sections" href="/about">About us</a>
         <span className="divider">|</span>
         <a className="sections" href="/our-services">Our Services</a>
         <span className="divider">|</span>
         <a className="sections" href="/order">Order Now</a>
         <span className="divider">|</span>
-        <a className="sections" href="/contact">Contact Us</a>
+        <a className="sections" href="/contact">Contact Us</a> 
+        <span className="divider">|</span>
+        <a className="sections" href="/products">Products</a> 
       </nav>
 
       <div className="whatsapp-container">
@@ -36,12 +40,6 @@ function Header() {
           </span>
         </a>
       </div>
- 
-      {/* <div className="whatsapp-icon-mob">
-        <a href= "https://wa.me/917519935805?text=Hello, Hello, I’m interested in exploring more about the products and services offered by Asikh Nursery.">
-          <img src={whatsappIcon} alt="WhatsApp" />
-        </a>
-      </div> */}
 
       <div className="menu-icon" onClick={() => setIsOpen(!isOpen)}>
         <span className="bar"></span>

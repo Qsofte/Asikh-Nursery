@@ -465,24 +465,36 @@
 
 /* Contact us*/
 
+*{
+  margin: 0;
+  padding: 0;
+}
+
   .contact-container{
+    margin: 0;
+    padding: 0;
     display: flex;
-    width: 100%;
+    width: 80%;
     align-items: center;
+    background-color: #FFFFFF;
   }
 
   .contact-head {
     display: block;
     font-size: 32px;
     font-family: "GilroySemiBold";
+    margin-top: 20%;
+    text-align: center;
+    margin-left: 25%;
   }
 
   .contact-box{
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
-    padding: 20px;
     background: none;
+    margin-left: 25%;
   }
 
   .contact-form{
@@ -526,8 +538,8 @@
     width: 100%;
     flex-direction: column;
     text-align: center;
-    padding: 15px;
-    margin: auto;
+    margin-top: 40%;
+    margin-left: 25%;
   }
 
   .contact-address div {
@@ -541,6 +553,7 @@
   .contact-address svg {
     width: 44px;
     height: 44px;
+    margin-left: 7%;
   }
 
   .contact-add,
@@ -548,6 +561,7 @@
   .contact-timing {
     font-size: 14px;
     font-family: "gilroymedium";
+    width: 100%;
   }
 
   /* Our Services */

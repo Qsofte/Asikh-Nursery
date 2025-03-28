@@ -64,11 +64,46 @@
       height: 80px;
       position: fixed;
     }
+  }
 
+  @media screen and (max-width: 768px) {
+      
     /* footer */
 
     .footer {
+      display: flex;
+      flex-direction: column;
+      width: fit-content;
+    }
+
+    .visit-text, .or-text, .order-btn, .contact-btn{
       display: none;
     }
+
+    .yellow-box{
+      width: 9em;
+      margin-bottom: 20em;
+    }
+
+    .footer-banner img{
+      width: auto;
+      height: 15em;
+    }
+
+    .footer-text{
+      font-size: 16px !important;
+      color: aliceblue !important;
+    }
+
+    .footer-logo img{
+      width: 8rem !important;
+      height: 8rem !important;
+    }
+
+    .footer-banner {
+      height: 80px;
+      padding: 0 !important;
+    }
+
   }
     
