@@ -31,14 +31,14 @@ function Footer() {
         <div className="footer-links">
           <h3>Links</h3>
           <a href="/about">About Us</a>
-          <a href="/ourservices">Our Services</a>
+          <a href="/our-services">Our Services</a>
           <a href="/order">Order Now</a>
         </div>
 
         {/* Footer Help Section */}
         <div className="footer-help">
           <h3>Help</h3>
-          <a href="/terms">Terms & Conditions</a>
+          {/* <a href="/terms">Terms & Conditions</a> */}
           <a href="/privacy">Privacy Policy</a>
           <a href="/contact">Contact Us</a>
         </div>

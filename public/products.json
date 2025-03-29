@@ -17,8 +17,8 @@
         "id": "3",
         "name": "ADENIUM",
         "image": "/ImageProducts/Adenium.jpg",
-        "price": "",
-        "description": "good"
+        "price": "100",
+        "description": "Adenium (Desert Rose) is a drought-resistant succulent known for its thick, swollen trunk and bright, trumpet-shaped flowers. It thrives in warm climates and is popular for bonsai."
     },
     {
         "id": 4,

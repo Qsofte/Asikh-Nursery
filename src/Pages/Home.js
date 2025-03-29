@@ -5,8 +5,16 @@ import tools from '../images/Tools.png';
 import flowers from '../images/Flower.jpeg';
 import homePic1 from "../images/home-pic-1.jpeg";
 import homePic2 from "../images/home-pic-2.png";
+// import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+
+  // const navigate = useNavigate();
+
+  // const handleClick = () => {
+  //   navigate("/order");
+  // }
+
   return (
     <>
     <div className="container">
@@ -16,9 +24,9 @@ const Home = () => {
           <h1>Buy Online: Greenery at your finger tips</h1>
           <p>Browse, select, and purchase your favourite plant from the comfort of your home</p>
           <div className="buttons1">
-          <button className="btn buy-now">Buy Now</button>
-          <button className="btn whatsapp wts">Whatsapp</button>
-          <button className="btn Know-More knw">Know More</button>
+          <a href="/order" className="btn buy-now" style={{textDecoration:"none"}}>Buy Now</a>
+          <a href="https://wa.me/917519935805?text=Hello, I’m interested in exploring more about the products and services offered by Asikh Nursery." style={{textDecoration:"none"}} className="btn whatsapp wts">Whatsapp</a>
+          <a href="/our-services" style={{textDecoration:"none"}} className="btn Know-More knw">Know More</a>
         </div>
         </div>
       </div>
@@ -41,8 +49,8 @@ const Home = () => {
           </p>
           <p className="para-txtre">Grow your dream garden with tools you can rely on!</p>
           <div className="buttons">
-            <button className="btn buy-now buy-hg">Buy Now</button>
-            <button className="btn learn-more">Learn more</button>
+            <a href="/order" style={{textDecoration:"none"}} className="btn buy-now">Buy Now</a>
+            <a href="/our-services" style={{textDecoration:"none"}} className="btn learn-more">Learn more</ a>
           </div>
         </div>
       </div>
@@ -56,8 +64,8 @@ const Home = () => {
           </p>
           <p className="para-txtre">From Our Nursery to Your Place.</p>
           <div className="buttons">
-            <button className="btn buy-now buy-hg">Buy Now</button>
-            <button className="btn learn-more">Learn more</button>
+          <a href="/order" style={{textDecoration:"none"}} className="btn buy-now">Buy Now</a>
+          <a href="/our-services" style={{textDecoration:"none"}} className="btn learn-more">Learn more</ a>
           </div>
         </div>
         <div className="image-box">
@@ -78,7 +86,7 @@ const Home = () => {
                 <p>To care for a plant effectively, ensure it receives the right amount of sunlight based on its needs, and water it regularly without overwatering. Use well-draining soil and provide appropriate nutrients through fertilizer during the growing season. Additionally, periodically check for pests and diseases, and prune any dead or damaged leaves to promote healthy growth.</p>
               </div>
               <div className="plt-care-btn1">
-                <button>Know More</button>
+                <button >Know More</button>
               </div>
             </div>
 

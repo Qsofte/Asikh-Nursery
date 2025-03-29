@@ -26,11 +26,11 @@ const ProductDetails = () => {
   if (!product.image) return <h2>We are working on this product, you will see the result soon.</h2>;
 
   return (
-    <div>
-      <h1>{product.name}</h1>
-      <img src={product.image} alt={product.name} />
-      <p>{product.description}</p>
-      <p>Price: {product.price}</p>
+    <div className="prdt-open-card">
+      <h1 className="prdt-open-name">{product.name}</h1>
+      <img src={product.image} alt={product.name} className="prdt-opn-img"/>
+      <p className="prdt-open-description">{product.description}</p>
+      <p className="prdt-open-price"><b>Price: </b>{product.price}</p>
     </div>
   );
 };
