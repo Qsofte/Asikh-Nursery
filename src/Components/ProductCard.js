@@ -12,7 +12,6 @@ const ProductCard = ({ product }) => {
       <h3 className="product-name">{product.name}</h3>
       <p className="product-price">{product.price}</p>
       <p className="product-description">{product.description}</p>
-    
       <div className="qr-code">
         <QRCodeCanvas value={productURL} size={100} />
       </div>

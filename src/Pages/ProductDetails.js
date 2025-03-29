@@ -3,19 +3,27 @@ import { useParams } from "react-router-dom";
 
 const ProductDetails = () => {
   const { id } = useParams();
+  console.log("Product ID from URL:", id);
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    fetch("/images/products.json") // ✅ JSON ko fetch kar rahe hain
+    fetch("/products.json")  
       .then((res) => res.json())
       .then((data) => {
-        const foundProduct = data.find((p) => p.id === parseInt(id));
+        console.log("Fetched Data:", data); 
+        console.log("Scanned Product id:", id, typeof id);
+  
+        const foundProduct = data.find((p) => String(p.id) === String(id));
+  
+        console.log("Matched Product:", foundProduct); 
         setProduct(foundProduct);
       })
-      .catch((err) => console.error("Error loading JSON:", err)); // ✅ Error handling
+      .catch((err) => console.error("Error loading JSON:", err));
   }, [id]);
+  
 
   if (!product) return <h2>Product Not Found</h2>;
+  if (!product.image) return <h2>We are working on this product, you will see the result soon.</h2>;
 
   return (
     <div>
