@@ -392,7 +392,7 @@
   }
 
   .footer-image {
-    margin-top: -2rem;
+    margin-bottom: 3.5rem;
   }
 
   .image-grid {
@@ -553,15 +553,23 @@
 
   /* Our Services */
 
-  .img-0 { width: 100%; height: 370px; }
-  .img-1 { width: 100%; height: 520px; }
+  .img-0 { width: 100%; height: 320px; }
+  .img-1 { width: 100%; height: 470px; }
   .img-2 { width: 100%; height: 520px; }
-  .img-3 { width: 100%; height: 650px; }
-  .img-4 { width: 100%; height: 770px; }
+  .img-3 { width: 100%; height: 620px; }
+  .img-4 { width: 100%; height: 790px; }
 
   .services-container {
     margin-left: 24px;
     margin-right: 24px;
+  }
+
+  .service-header {
+    display: block;
+    font-size: 32px;
+    font-family: "gilroysemibold";
+    text-align: center;
+    margin-bottom: 0.5rem;
   }
 
   .service-title {
@@ -573,9 +581,13 @@
     filter: brightness(50%);
   }
 
-  .service-description, .know-more {
+  .service-description {
     font-size: 18px;
-    font-family: "gilroyregular";
+    font-family: "gilroyregular";  
+  }
+
+  .know-more {
+    display: none;
   }
 
 }

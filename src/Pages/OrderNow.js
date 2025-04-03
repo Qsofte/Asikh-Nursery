@@ -1013,6 +1013,7 @@ const products = [
 
   const OrderNow = () => {
     const [filters, setFilters] = useState({ categories: [], types: [], priceRange: [] });
+    // const [sortOrder, setSortOrder] = useState("asc");
 
     const handleFilterChange = (type, value) => {
       setFilters((prevFilters) => {
@@ -1026,6 +1027,11 @@ const products = [
         return { ...prevFilters, [type]: updatedFilter };
       });
     };
+
+
+    // const handleSort = (e) => {
+    //   setSortOrder(e.target.value);
+    // };
   
     const filteredProducts = products.filter((product) => {
       const categoryMatch = filters.categories.length
@@ -1040,6 +1046,7 @@ const products = [
       : true;
     return categoryMatch && typeMatch && priceMatch && searchMatch;
   });
+  // .sort((a, b) => (sortOrder === "asc" ? a.price - b.price : b.price - a.price));
 
     return (
       <div className="Ordernow-container">
@@ -1110,6 +1117,10 @@ const products = [
         <div className="Ordernow-header">
           <span className="Ordernow-span">Showing {filteredProducts.length} results</span>
           <button className="sort-btn">Default Sorting ⬇️</button>
+          {/* <select onChange={handleSort} className="sort-dropdown">
+            <option value="asc">Sort by ↑</option>
+            <option value="desc">Sort by ↓</option>
+          </select> */}
         </div>
         <div className="line-head"></div>
         <div className="products">

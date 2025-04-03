@@ -37,6 +37,7 @@ const services = [
 const OurServices = () => {
   return (
     <div className="services-container">
+      <div className="service-header"><p>Our Services</p></div>
       {services.map((service, index) => (
         <div className="service-card" key={index}>
           <img src={service.image} alt={service.title} className={`service-img img-${index}`} />

@@ -527,6 +527,10 @@
   margin-bottom: 10rem;
 }
 
+.service-header {
+  display: none;
+}
+
 .service-card {
   position: relative;
   overflow: hidden;
