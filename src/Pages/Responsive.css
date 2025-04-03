@@ -138,10 +138,6 @@
   font-style: normal;
 }
 
-/* body {
-  background-color: #F2FDF5;
-} */
-
 
 @media (max-width: 1024px) {
   .img-main {
@@ -217,6 +213,16 @@
     overflow-x: hidden;
   }
 
+  .hm-bg-img {
+    display: none;
+  }
+
+  .hm-bg-img-mob {
+    width: 100% !important;
+    height: auto;
+    display: block;
+  }
+
   .hm-img-text img {
     width: auto;
     height: 464px;
@@ -235,6 +241,10 @@
     font-family: "GilroyRegular";
   }
 
+  .visited-text {
+    display: none;
+  }
+
   .buttons1 {
     display: flex;
     gap: 1.5rem;
@@ -248,6 +258,8 @@
     color: white;
     width: 100%;
     text-align: center;
+    font-family: "GilroySemiBold";
+    padding: 6px 25px !important;
   }
 
   .wts {
@@ -268,17 +280,20 @@
     align-items: center;
     flex-direction: column;
     padding: 10px;
+    margin-left: 24px;
+    margin-right: 24px;
+    background-color: #F2FDF5;
   }
 
   .products-title {
     font-size: 24px;
-    margin-right: 14rem;
+    margin-right: 16.5rem;
     margin-top: 1.5rem;
     font-family: "GilroySemiBold";
   }
 
   .product-item{
-    margin-right: 7rem;
+    margin-right: 10.5rem;
     gap: 30px;
     margin-bottom: 0.1rem;
   }
@@ -307,6 +322,11 @@
     font-family: "GilroyRegular";
   }
 
+  .plant-section {
+    text-align: center;
+    padding: 10px;
+  }
+
   .para-txtre{
     display: none;
   }
@@ -322,11 +342,15 @@
   /* Third Section (Plant Care Guide) */
 
   .plt-1 {
+    width: 90%;
     font-size: 24px;
-    padding: 0px 20px;
+    font-family: "GilroySemiBold";
+    margin-left: -0.4rem !important;
   }
 
   .plt-care {
+    width: 342px;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -337,6 +361,7 @@
     border: 1px solid black;
     height: auto;
     padding-bottom: 30px;
+    margin-right: 5.5rem;
   }
 
   .plt-care-img1 img, .plt-care-img2 img {
@@ -424,44 +449,6 @@
     display: block;
     margin-top: 1rem;
   }
-
-  /* .abt-mission  {
-   
-  } */
-
-  /* First Section */
-
-  /* .abt-img1 img {
-    width: 26.9rem;
-    height: 13.81rem;
-    display: block;
-  }
-
- .abt-para1 {
-  font-size: 24px;
-  font-weight: bold;
- }
-
- /* Second / Third Section 
-
- .abt-2, .abt-img3 img {
-  width: 27.7rem;
-  height: 8.87rem;
- }
-
- .abt-img2 img {
-  width: 13.42rem;
-  height: 8.87rem;
- }
-
- .abt-content h2 {
-  font-size: 12.85px;
- }
-
- .abt-content p {
-  font-size: 8.56px;
- } */
-
 
 /* Contact us*/
 
@@ -572,12 +559,23 @@
   .img-3 { width: 100%; height: 650px; }
   .img-4 { width: 100%; height: 770px; }
 
+  .services-container {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
   .service-title {
     font-size: 24px;
+    font-family: "gilroysemibold";
+  }
+
+  .service-img {
+    filter: brightness(50%);
   }
 
   .service-description, .know-more {
     font-size: 18px;
+    font-family: "gilroyregular";
   }
 
 }

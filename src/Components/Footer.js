@@ -1,6 +1,6 @@
 import './Footer.css';
 import './Resp.css';
-import flower from "../images/Flower.png";
+// import flower from "../images/Flower.png";
 import whatsapp from "../Logo/WhatsApp.png";
 import instagram from "../Logo/Insta.png";
 import linkedin from "../Logo/Linkedin.png";
@@ -18,7 +18,7 @@ function Footer() {
             <a href="/contact" className="contact-btn">Contact Us</a>
           </div>
         </div>
-        <img className="footer-banner-img" src={flower} alt="Plants" />
+        {/* <img className="footer-banner-img" src={flower} alt="Plants" /> */}
       </div>
 
       <div className="footer-main">

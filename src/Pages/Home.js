@@ -1,6 +1,7 @@
 import "./Page.css";
 import "./Responsive.css";
 import Homebg from '../images/Home-pg.jfif';
+import Homebgmob from '../images/homepg_mob.jfif';
 import tools from '../images/Tools.png';
 import flowers from '../images/Flower.jpeg';
 import homePic1 from "../images/home-pic-1.jpeg";
@@ -21,11 +22,17 @@ const Home = () => {
       <div className="hm-pg">
         <div className="hm-img-text">
           <img src={Homebg} alt="Garden" className="hm-bg-img"/>
+          <img src={Homebgmob} alt="Garden" className="hm-bg-img-mob"/>
           <h1>Buy Online: Greenery at your finger tips</h1>
-          <p>Browse, select, and purchase your favourite plant from the comfort of your home</p>
+          <p>Browse, select, and purchase your favourite plant from the comfort of your home or</p>
+            <p className="visited-text">
+              Visit us at <a href=" https://maps.app.goo.gl/EtsYhZ6PkbQc9TyK8" target="_blank">Chintamani market, Hajipur, Vaishali.</a>
+            </p>
+
+
           <div className="buttons1">
-          <a href="/order" className="btn buy-now" style={{textDecoration:"none"}}>Buy Now</a>
-          <a href="https://wa.me/917519935805?text=Hello, I’m interested in exploring more about the products and services offered by Asikh Nursery." style={{textDecoration:"none"}} className="btn whatsapp wts">Whatsapp</a>
+          <a href="/order" className="btn buy-now by-what" style={{textDecoration:"none"}}>Buy Now</a>
+          <a href="https://wa.me/917519935805?text=Hello, I’m interested in exploring more about the products and services offered by Asikh Nursery." style={{textDecoration:"none"}} className="btn whatsapp wts by-what">Whatsapp</a>
           <a href="/our-services" style={{textDecoration:"none"}} className="btn Know-More knw">Know More</a>
         </div>
         </div>
@@ -55,7 +62,7 @@ const Home = () => {
         </div>
       </div>
       
-      <div className="product-item reverse">
+      <div className="plant-section">
         <div className="product-content">
           <h3>Plants to Enrich Your Space</h3>
           <p>
@@ -68,6 +75,7 @@ const Home = () => {
           <a href="/our-services" style={{textDecoration:"none"}} className="btn learn-more">Learn more</ a>
           </div>
         </div>
+        
         <div className="image-box">
           <img src={flowers} alt="Plants" className="product-img prdt-img2" />
         </div>

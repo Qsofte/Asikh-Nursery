@@ -15,45 +15,46 @@
   background-color: #FFDD55;
   padding: 20px;
   border-radius: 10px;
-  margin-bottom: 30px;
-  max-width: 90%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: -7rem;
 }
 
-.footer-banner img {
+/* .footer-banner img {
   width: 150px;
   height: auto;
-}
+} */
 
 .yellow-box {
   flex: 1;
-  /* max-width: 70%; */
-  /* padding: 10px; */
+  margin-left: 1rem;
 }
 
 .visit-text {
   font-size: 32px;
   font-family: "gilroymedium";
   color: black;
+  text-align: left;
 }
 
 .or-text {
   font-size: 32px;
   font-family: "gilroymedium";
-  margin: 10px 0;
+  margin: 8px 0;
   color: black;
+  text-align: left;
 }
 
 .footer-buttons {
   display: flex;
-  gap: 10rem;
-  justify-content: center;
+  gap: 2rem;
+  /* justify-content: center; */
 }
 
 .order-btn, .contact-btn {
   color: black;
-  padding: 10px 20px;
+  padding: 8px 10px;
   border-radius: 5px;
   text-decoration: none;
   font-size: 24px;
@@ -86,7 +87,7 @@
 
 .footer-links h3, .footer-help h3, .footer-social h3 {
   font-size: 24px; 
-  font-family: "gilroybold";
+  font-family: "gilroysemibold";
   color: black;
   margin-bottom: 30px;
 }

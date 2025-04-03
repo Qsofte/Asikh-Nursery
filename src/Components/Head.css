@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "GilroyMedium";
+  src: url("../fonts/Gilroy-Medium.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
 .header {
   width: auto;
   height: 5rem;
@@ -35,6 +42,7 @@
   color: white;
   text-decoration: none;
   font-size: 24px;
+  font-family: "GilroyMedium";
 }
 
 .sections:hover {
@@ -45,6 +53,7 @@
 .divider {
   color: white; 
   font-size: 24px;
+  font-family: "GilroyMedium";
 }
 
 .whatsapp-container {
