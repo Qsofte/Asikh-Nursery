@@ -1013,7 +1013,6 @@ const products = [
 
   const OrderNow = () => {
     const [filters, setFilters] = useState({ categories: [], types: [], priceRange: [] });
-    // const [sortOrder, setSortOrder] = useState("asc");
 
     const handleFilterChange = (type, value) => {
       setFilters((prevFilters) => {
@@ -1027,11 +1026,6 @@ const products = [
         return { ...prevFilters, [type]: updatedFilter };
       });
     };
-
-
-    // const handleSort = (e) => {
-    //   setSortOrder(e.target.value);
-    // };
   
     const filteredProducts = products.filter((product) => {
       const categoryMatch = filters.categories.length
@@ -1046,7 +1040,6 @@ const products = [
       : true;
     return categoryMatch && typeMatch && priceMatch && searchMatch;
   });
-  // .sort((a, b) => (sortOrder === "asc" ? a.price - b.price : b.price - a.price));
 
     return (
       <div className="Ordernow-container">
@@ -1067,6 +1060,9 @@ const products = [
             </li>
           ))}
         </ul>
+
+        <div className="ordernow-underline"></div>
+
         <h3 className="filter">Type</h3>
         <ul>
           {["Home", "Garden"].map((type) => (
@@ -1079,6 +1075,9 @@ const products = [
             </li>
           ))}
         </ul>
+
+        <div className="ordernow-underline"></div>
+
         <h3 className="filter">Price Range</h3>
         <ul>
           {[
@@ -1100,6 +1099,9 @@ const products = [
             </li>
           ))}
         </ul>
+
+        <div className="ordernow-underline"></div>
+
         <h3 className="filter">Language</h3>
         <ul>
           {["English", "Hindi"].map((lang) => (
@@ -1117,12 +1119,10 @@ const products = [
         <div className="Ordernow-header">
           <span className="Ordernow-span">Showing {filteredProducts.length} results</span>
           <button className="sort-btn">Default Sorting ⬇️</button>
-          {/* <select onChange={handleSort} className="sort-dropdown">
-            <option value="asc">Sort by ↑</option>
-            <option value="desc">Sort by ↓</option>
-          </select> */}
         </div>
+
         <div className="line-head"></div>
+
         <div className="products">
           {filteredProducts.map((product, index) => (
             <div className="product-card" key={index}>

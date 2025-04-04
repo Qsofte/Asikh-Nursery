@@ -1,1 +1,13 @@
+@media (max-width: 768px) {
+
+    .Ordernow-header, .line-head, .sidebar {
+        display: none;
+    }
+
+    .product-card {
+        border: none !important;
+    }
+
+}
+
 

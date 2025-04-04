@@ -504,7 +504,8 @@
   }
 
   .footer-image {
-    padding-top: 30px;
+    margin-top: 30px;
+    margin-bottom: 10rem;
   }
 
   .Plant {

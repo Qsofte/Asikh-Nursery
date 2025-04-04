@@ -12,9 +12,11 @@
   justify-content: space-evenly;
   align-items: center;
   padding: 10px 20px;
-  background-color: #293a2190; 
+  background-color: #293a2190;
+  /* opacity: 0.56; */
   position: relative;
   gap: 20px;
+  /* z-index: 9999; */
 }
 
 /* Logo */

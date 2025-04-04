@@ -323,12 +323,25 @@
   }
 
   .plant-section {
-    text-align: center;
-    padding: 10px;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    justify-content: space-between;
+    margin-right: 10rem;
+    margin-top: 2rem;
+    gap: 30px;
+  }
+
+  .product-content {
+    order: 2;
   }
 
   .para-txtre{
     display: none;
+  }
+
+  .buttons {
+    padding-right: 5rem;
   }
   
   .learn-more{

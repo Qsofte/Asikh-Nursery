@@ -168,6 +168,14 @@ li {
   cursor: pointer;
 }
 
+.ordernow-underline {
+  border: 1px solid black;
+}
+
+.filter-container {
+  display: none;
+}
+
 .filter {
   margin-top: 1rem;
   margin-bottom: 1rem !important;

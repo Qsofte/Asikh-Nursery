@@ -1,5 +1,9 @@
   @media screen and (max-width: 768px) {
 
+    .header {
+      background-color: none;
+    }
+
     .logo-img {
       width: 62px;
       height: 59px;
@@ -22,9 +26,12 @@
       display: flex;
     }
   
-    .nav-links a {
+    .nav-links a,
+    .nav-links a:visited,
+    .nav-links a:focus,
+    .nav-links a:active {
       padding: 8px 0;
-      color: black;
+      color: black !important;
       display: block;
       font-size: 24px;
       font-family: "gilroyregular";
