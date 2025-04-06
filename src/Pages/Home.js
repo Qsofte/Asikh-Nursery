@@ -24,7 +24,8 @@ const Home = () => {
           <img src={Homebg} alt="Garden" className="hm-bg-img"/>
           <img src={Homebgmob} alt="Garden" className="hm-bg-img-mob"/>
           <h1>Buy Online: Greenery at your finger tips</h1>
-          <p>Browse, select, and purchase your favourite plant from the comfort of your home or</p>
+          <p>Browse, select, and purchase your favourite plant from the comfort of your home</p>
+          <p className="text-or">or</p>
             <p className="visited-text">
               Visit us at <a href=" https://maps.app.goo.gl/EtsYhZ6PkbQc9TyK8" target="_blank">Chintamani market, Hajipur, Vaishali.</a>
             </p>

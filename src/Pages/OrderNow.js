@@ -1043,6 +1043,7 @@ const products = [
 
     return (
       <div className="Ordernow-container">
+
       <aside className="sidebar">
         <input type="text" placeholder="Search" className="search-box" value={filters.search}
           onChange={(e) => handleFilterChange("search", e.target.value)}
@@ -1115,6 +1116,7 @@ const products = [
           ))}
         </ul>
       </aside>
+
       <main className="product-grid">
         <div className="Ordernow-header">
           <span className="Ordernow-span">Showing {filteredProducts.length} results</span>
