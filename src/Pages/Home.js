@@ -95,7 +95,7 @@ const Home = () => {
                 <p>To care for a plant effectively, ensure it receives the right amount of sunlight based on its needs, and water it regularly without overwatering. Use well-draining soil and provide appropriate nutrients through fertilizer during the growing season. Additionally, periodically check for pests and diseases, and prune any dead or damaged leaves to promote healthy growth.</p>
               </div>
               <div className="plt-care-btn1">
-                <button >Know More</button>
+                <button className="plt-know">Know More</button>
               </div>
             </div>
 
@@ -107,7 +107,7 @@ const Home = () => {
                   <p>To care for a plant effectively, ensure it receives the right amount of sunlight based on its needs, and water it regularly without overwatering. Use well-draining soil and provide appropriate nutrients through fertilizer during the growing season. Additionally, periodically check for pests and diseases, and prune any dead or damaged leaves to promote healthy growth.</p>
                 </div>
                 <div className="plt-care-btn2">
-                  <button>Know More</button>
+                  <button className="plt-know">Know More</button>
                 </div>
             </div>
           </div>

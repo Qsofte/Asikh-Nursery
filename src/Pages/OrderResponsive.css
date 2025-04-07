@@ -83,5 +83,166 @@
 
 }
 
+@media (max-width: 768px) {
+ 
+  .Ordernow-header, .line-head, .sidebar {
+     display: none;
+ }
+
+ /* .product-card {
+     border: none !important;
+ } */
+
+ .Ordernow-container{
+     padding: 0;
+     margin: auto;
+ }
+
+ /* .products{
+     display: flex;
+     flex-direction: column;
+     margin: auto;
+     padding: 0;
+ } */
+
+ .products {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     margin: auto;
+     margin-right: 2%;
+     padding: 0;
+ }
+
+ .product-card {
+     width: 80% !important;
+     height: auto;
+     margin: 3%;
+ }
+
+ .product-card img{
+     width: 100%;
+     height: auto;
+ }
+
+ .product-card h4{
+     display: none;
+ }
+
+ .cart-btn{
+     padding: 0;
+     width: 100%;
+ }
+
+}
+
+
+@media (max-width: 768px) {
+ 
+  .Ordernow-header, .line-head, .sidebar {
+     display: none;
+ }
+
+ /* .product-card {
+     border: none !important;
+ } */
+
+ .Ordernow-container{
+     padding: 0;
+     margin: auto;
+ }
+
+ /* .products{
+     display: flex;
+     flex-direction: column;
+     margin: auto;
+     padding: 0;
+ } */
+
+ .products {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     margin: auto;
+     margin-right: 2%;
+     padding: 0;
+ }
+
+ .product-card {
+     width: 80% !important;
+     height: auto;
+     margin: 3%;
+ }
+
+ .product-card img{
+     width: 100%;
+     height: auto;
+ }
+
+ .product-card h4{
+     display: none;
+ }
+
+ .cart-btn{
+     padding: 0;
+     width: 100%;
+ }
+
+}
+
+
+@media (max-width: 768px) {
+ 
+  .Ordernow-header, .line-head, .sidebar {
+     display: none;
+ }
+
+ /* .product-card {
+     border: none !important;
+ } */
+
+ .Ordernow-container{
+     padding: 0;
+     margin: auto;
+ }
+
+ /* .products{
+     display: flex;
+     flex-direction: column;
+     margin: auto;
+     padding: 0;
+ } */
+
+ .products {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     margin: auto;
+     margin-right: 2%;
+     padding: 0;
+ }
+
+ .product-card {
+     width: 80% !important;
+     height: auto;
+     margin: 3%;
+ }
+
+ .product-card img{
+     width: 100%;
+     height: auto;
+ }
+
+ .product-card h4{
+     display: none;
+ }
+
+ .cart-btn{
+     padding: 0;
+     width: 100%;
+ }
+
+}
+
+
+
+
 
 

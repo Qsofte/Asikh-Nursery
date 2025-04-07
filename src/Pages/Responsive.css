@@ -211,6 +211,7 @@
     width: 100%;
     height: 100%;
     overflow-x: hidden;
+    /* background-color: #F2FDF5; */
   }
 
   .hm-bg-img {
@@ -282,7 +283,7 @@
     padding: 10px;
     margin-left: 24px;
     margin-right: 24px;
-    background-color: #F2FDF5;
+    /* background-color: #F2FDF5; */
   }
 
   .products-title {
@@ -297,6 +298,7 @@
   .product-item{
     margin-right: 10.5rem;
     gap: 20px;
+    margin-bottom: -4rem;
   }
 
   .product-img{
@@ -392,11 +394,14 @@
   }
 
   .plt-care-btn1 button, .plt-care-btn2 button{
-    width: 50%;
+    width: 60%;
     padding: 8px 15px;
+    font-size: 25px;
+    font-family: "gilroyregular";
   }
 
   /* About Us */
+
 
   .about-page {
     margin-top: 3rem;
