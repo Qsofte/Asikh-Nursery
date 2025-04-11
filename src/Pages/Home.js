@@ -57,7 +57,7 @@ const Home = () => {
           </p>
           <p className="para-txtre">Grow your dream garden with tools you can rely on!</p>
           <div className="buttons">
-            <a href="/order" style={{textDecoration:"none"}} className="btn buy-now buy-now-mob">Buy Now</a>
+            <a href="/order" style={{textDecoration:"none", color: "black"}} className="btn buy-now buy-now-mob">Buy Now</a>
             <a href="/our-services" style={{textDecoration:"none"}} className="btn learn-more">Learn more</ a>
           </div>
         </div>
@@ -72,7 +72,7 @@ const Home = () => {
           </p>
           <p className="para-txtre">From Our Nursery to Your Place.</p>
           <div className="buttons">
-          <a href="/order" style={{textDecoration:"none"}} className="btn buy-now buy-now-mob">Buy Now</a>
+          <a href="/order" style={{textDecoration:"none", color: "black"}} className="btn buy-now buy-now-mob">Buy Now</a>
           <a href="/our-services" style={{textDecoration:"none"}} className="btn learn-more">Learn more</ a>
           </div>
         </div>

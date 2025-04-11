@@ -5,6 +5,7 @@ import services_landscape from "../images/services_landscape.png";
 import service_garden from "../images/service_garden.jfif";
 import service_delivery from "../images/service_delivery.jfif";
 import service_custom from "../images/service_custom.jpeg";
+import { Link } from 'react-router-dom';
 
 const services = [
   {
@@ -37,6 +38,12 @@ const services = [
 const OurServices = () => {
   return (
     <div className="services-container">
+      <div className="link link-our-ser">
+          <p>
+            <Link to="/home">Home</Link> &gt; <span>Our Services</span>
+          </p>
+        </div>
+        <div className="line-header"></div>
       <div className="service-header"><p>Our Services</p></div>
       {services.map((service, index) => (
         <div className="service-card" key={index}>

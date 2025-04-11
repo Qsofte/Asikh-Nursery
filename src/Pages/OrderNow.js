@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect  } from "react";
 import "./OrderNow.css";
 import "./OrderResponsive.css";
+import { useMemo } from "react";
+import { Link } from 'react-router-dom';
 
 import Asparagus from "../ImageProducts/Asparagus marry.jpg";
 import RangonChinese from "../ImageProducts/Rangon Chinease.jpg";
@@ -57,8 +59,12 @@ const products = [
   {
     id: 1,
     name: "Asparagus",
+      // {en: "Asparagus",},
+      // hi: "एस्पैरेगस",},
     description: "Helps in creating a refreshing environment, give serene and calmness to your home",
-    category: "Plants",
+      // {en: "Helps in creating a refreshing environment, give serene and calmness to your home"},
+      // hi: "यह पौधा आपके घर को शांति और ताजगी प्रदान करता है।",},
+      category: "Plants",
     // type: ["Home", "Garden"],
     price: 100,
     image: Asparagus,
@@ -66,8 +72,13 @@ const products = [
   {
     id: 2,
     name: "Rangon Chinese",
+      // {en: "Rangon Chinese",
+      // hi: "रंगोन चाइनीज़",},
+
     description: "Helps in creating a refreshing environment, give serene and calmness to your home",
-    category: "Plants",
+      // {en: "Helps in creating a refreshing environment, give serene and calmness to your home",
+      // hi: "यह पौधा आपके घर को शांति और ताजगी प्रदान करता है।",},
+      category: "Plants",
     // type: ["Home", "Garden"],
     price: 130,
     image: RangonChinese,
@@ -105,7 +116,7 @@ const products = [
     description: "Helps in creating a refreshing environment, give serene and calmness to your home",
     category: "Plants",
     // type: ["Home", "Garden"],
-    price: 0,
+    price: 100,
     image: SejoniomBig,
   },
   {
@@ -114,7 +125,7 @@ const products = [
     description: "Helps in creating a refreshing environment, give serene and calmness to your home",
     category: "Plants",
     type: "Home",
-    price: 0,
+    price: 100,
     image: Syzygium,
   },
   {
@@ -234,7 +245,7 @@ const products = [
     name: "ALLAMANDA",
     description: "Helps in creating a refreshing environment, give serene and calmness to your home",
     category: "Plants",
-    price: 0,
+    price: 100,
     image: Alamanda,
   },
   {
@@ -242,7 +253,7 @@ const products = [
     name: "ALOO BHUKHARA(FRUIT)",
     description: "Helps in creating a refreshing environment, give serene and calmness to your home",
     category: "Plants",
-    price: 0,
+    price: 100,
     image: AlloBhukara,
   },
   {
@@ -1005,6 +1016,52 @@ const products = [
 
 ];
 
+  const translations = {
+  en: {
+    name: "Name",
+    description: "Description",
+    searchPlaceholder: "Search",
+    categories: "Categories",
+    type: "Type",
+    priceRange: "Price Range",
+    language: "Language",
+    buyNow: "Buy Now",
+    sortBy: "Sort By",
+    defaultSorting: "Default Sorting",
+    aToZ: "A to Z",
+    zToA: "Z to A",
+    priceLowHigh: "Price Low to High",
+    priceHighLow: "Price High to Low",
+    showing: "Showing",
+    results: "results",
+    tools: "Tools",
+    plants: "Plants",
+    home: "Home",
+    garden: "Garden",
+  },
+  hi: {
+    name: "नाम",
+    description: "विवरण",
+    searchPlaceholder: "खोजें",
+    categories: "श्रेणियाँ",
+    type: "प्रकार",
+    priceRange: "मूल्य सीमा",
+    language: "भाषा",
+    buyNow: "अभी खरीदें",
+    sortBy: "क्रमबद्ध करें",
+    aToZ: "A से Z",
+    zToA: "Z से A",
+    priceLowHigh: "कीमत: कम से उच्च",
+    priceHighLow: "कीमत: उच्च से कम",
+    showing: "दिखा रहा है",
+    results: "परिणाम",
+    tools: "उपकरण",
+    plants: "पौधे",
+    home: "घर",
+    garden: "बगीचा",
+  },
+};
+
   const handleBuyNow = () => {
     const whatsappURL = `https://wa.me/917519935805?text=Hello, Hello, I’m interested in exploring more about the products and services offered by Asikh Nursery.`;
     window.open(whatsappURL, "_blank");
@@ -1012,9 +1069,23 @@ const products = [
 
 
   const OrderNow = () => {
-    const [filters, setFilters] = useState({ categories: [], types: [], priceRange: [] });
+    const [filters, setFilters] = useState({ categories: [], types: [], priceRange: [], search: "",});
+    const [sortOption, setSortOption] = useState("");
+    const [sortedProducts, setSortedProducts] = useState([]);
+    const [language, setLanguage] = useState("en");
+    const [showMobileFilters, setShowMobileFilters] = useState(false);
+    const t = useMemo(() => translations[language], [language]);
+    
+    const handleSortChange = (e) => {
+      setSortOption(e.target.value);
+    };
 
     const handleFilterChange = (type, value) => {
+      if (type === "language") {
+        setLanguage(value);
+        return; 
+      }
+
       setFilters((prevFilters) => {
         if (type === "search") {
           return { ...prevFilters, search: value };
@@ -1026,30 +1097,49 @@ const products = [
         return { ...prevFilters, [type]: updatedFilter };
       });
     };
-  
+
     const filteredProducts = products.filter((product) => {
       const categoryMatch = filters.categories.length
       ? filters.categories.includes(product.category)
       : true;
+
     const typeMatch = filters.types.length ? filters.types.includes(product.type) : true;
     const priceMatch = filters.priceRange.length
       ? filters.priceRange.some(([min, max]) => product.price >= min && product.price <= max)
       : true;
+
     const searchMatch = filters.search
       ? product.name.toLowerCase().includes(filters.search.toLowerCase())
       : true;
+
     return categoryMatch && typeMatch && priceMatch && searchMatch;
   });
 
+  useEffect(() => {
+    let sorted = [...filteredProducts];
+
+    if (sortOption === "nameAZ") {
+      sorted.sort((a, b) => a.name.localeCompare(b.name));
+    } else if (sortOption === "nameZA") {
+      sorted.sort((a, b) => b.name.localeCompare(a.name));
+    } else if (sortOption === "priceLowHigh") {
+      sorted.sort((a, b) => a.price - b.price);
+    } else if (sortOption === "priceHighLow") {
+      sorted.sort((a, b) => b.price - a.price);
+    }
+
+    setSortedProducts(sorted);
+  }, [filteredProducts, sortOption]);
+  
+
     return (
       <div className="Ordernow-container">
-
       <aside className="sidebar">
-        <input type="text" placeholder="Search" className="search-box" value={filters.search}
+        <input type="text" placeholder= {t.searchPlaceholder} className="search-box" value={filters.search}
           onChange={(e) => handleFilterChange("search", e.target.value)}
         />
 
-        <h3>Categories</h3>
+        <h3>{t.categories}</h3>
         <ul>
           {["Tools", "Plants"].map((cat) => (
             <li key={cat} className="filter-item">
@@ -1064,7 +1154,7 @@ const products = [
 
         <div className="ordernow-underline"></div>
 
-        <h3 className="filter">Type</h3>
+        <h3 className="filter">{t.type}</h3>
         <ul>
           {["Home", "Garden"].map((type) => (
             <li key={type} className="filter-item">
@@ -1079,7 +1169,7 @@ const products = [
 
         <div className="ordernow-underline"></div>
 
-        <h3 className="filter">Price Range</h3>
+        <h3 className="filter">{t.priceRange}</h3>
         <ul>
           {[
             [0, 400],
@@ -1103,41 +1193,138 @@ const products = [
 
         <div className="ordernow-underline"></div>
 
-        <h3 className="filter">Language</h3>
+        <h3 className="filter">{t.language}</h3>
         <ul>
-          {["English", "Hindi"].map((lang) => (
-            <li key={lang} className="filter-item">
+          {[
+            {label: "English", value: "en"},
+            { label: "हिन्दी", value: "hi" },
+          ].map((langOption) => (
+            <li key={langOption.value} className="filter-item">
               <input
-                type="checkbox"
-                onChange={() => handleFilterChange("languages", lang)}
+                type="radio"
+                name="language"
+                checked={language === langOption.value}
+                onChange={() => handleFilterChange("language", langOption.value)}
               />
-              <span className="filter-label">{lang}</span>
+              <span className="filter-label">{langOption.value}</span>
             </li>
           ))}
         </ul>
       </aside>
+      
 
-      <main className="product-grid">
-        <div className="Ordernow-header">
-          <span className="Ordernow-span">Showing {filteredProducts.length} results</span>
-          <button className="sort-btn">Default Sorting ⬇️</button>
+      <main className="product-grid ordernow-container">    
+      <div className="link-ordernow">
+          <p>
+            <Link to="/home">Home</Link> &gt; <span>Order Now</span>
+          </p>
         </div>
+        <div className="Ordernow-header">
+          <span className="Ordernow-span">{t.showing} {sortedProducts.length} {t.results}</span>
+          <select className="sort-btn custom-select" onClick={handleSortChange}>{t.defaultSorting}
+            <option value="">{t.defaultSorting}</option>
+            <option value="priceLowHigh">{t.priceLowHigh}</option>
+            <option value="priceHighLow">{t.priceHighLow}</option>
+            <option value="nameAZ">{t.aToZ}</option>
+            <option value="nameZA">{t.zToA}</option>
+          </select>
+        </div>
+
+          {/* Mobile */}
+        <div className="ordernow-mobile-header">
+          <select className="sort-dropdown" onChange={handleSortChange}>
+            <option value="">{t.sortBy}</option>
+            <option value="priceLowHigh">{t.priceLowHigh}</option>
+            <option value="priceHighLow">{t.priceHighLow}</option>
+            <option value="nameAZ">{t.aToZ}</option>
+            <option value="nameZA">{t.zToA}</option>
+          </select>
+
+          <input
+            type="text"
+            placeholder={t.searchPlaceholder}
+            value={filters.search}
+            onChange={(e) => handleFilterChange("search", e.target.value)}
+            className="mobile-search"
+          />
+
+          <button className="filter-toggle" onClick={() => setShowMobileFilters(true)}>
+            <i className="fa fa-sliders" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        {showMobileFilters && (
+          <div className="mobile-filter-modal">
+            <div className="mobile-filter-header">
+              <h3>{t.categories}</h3>
+              <button className="close-btn" onClick={() => setShowMobileFilters(false)}>×</button>
+            </div>
+
+            <ul>
+              {["Tools", "Plants"].map((cat) => (
+                <li key={cat} className="filter-item">
+                  <input
+                    type="checkbox"
+                    checked={filters.categories.includes(cat)}
+                    onChange={() => handleFilterChange("categories", cat)}
+                  />
+                  <span className="filter-label">{cat}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="ordernow-underline"></div>
+
+            <h3>{t.type}</h3>
+            <ul>
+              {["Home", "Garden"].map((type) => (
+                <li key={type} className="filter-item">
+                  <input
+                    type="checkbox"
+                    checked={filters.types.includes(type)}
+                    onChange={() => handleFilterChange("types", type)}
+                  />
+                  <span className="filter-label">{type}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="ordernow-underline"></div>
+
+            <h3>{t.priceRange}</h3>
+            <ul>
+              {[ [0, 400],[400, 800],[800, 1200],[1200, 1600],[1600, 2000],[2000, 2400],[2400, 2800],[2800, 10000] ].map(([min, max]) => (
+                <li key={`${min}-${max}`} className="filter-item">
+                  <input
+                    type="checkbox"
+                    onChange={() => handleFilterChange("priceRange", [min, max])}
+                  />
+                  <span className="filter-label">₹{min} - ₹{max}</span>
+                </li>
+              ))}
+            </ul>
+
+            <button className="apply-btn" onClick={() => setShowMobileFilters(false)}>Apply Filters</button>
+          </div>
+        )}
 
         <div className="line-head"></div>
 
         <div className="products">
-          {filteredProducts.map((product, index) => (
+          {sortedProducts.map((product, index) => (
             <div className="product-card" key={index}>
               <img src={product.image} alt={product.name} />
               <h4>{product.name}</h4>
               <p>{product.description}</p>
               <span className="price">₹{product.price}</span>
-              <button className="cart-btn" onClick={handleBuyNow}>Buy Now</button>
+              <button className="cart-btn" onClick={handleBuyNow}>{t.buyNow}</button>
             </div>
           ))}
         </div>
       </main>
-    </div>
+    </div>  
   );
 };
+
+
 export default OrderNow;

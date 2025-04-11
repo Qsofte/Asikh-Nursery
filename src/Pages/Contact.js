@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
   const fullNameRef = useRef(null);
@@ -29,6 +30,12 @@ const Contact = () => {
 
   return (
     <div className="contact-container">
+      <div className="link link-contact">
+        <p>
+          <Link to="/home">Home</Link> &gt; <span>Contact Us</span>
+        </p>
+      </div>
+      <div className="line-header line-contact"></div>
       <h2 className='contact-head'>Contact Us</h2>
       <div className="contact-box">
         <div className="contact-form">

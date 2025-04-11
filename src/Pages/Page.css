@@ -122,11 +122,6 @@
   font-style: normal;
 }
 
-/* body {
-  background-color: #F2FDF5;
-} */
-
-
 .container{
   width: 100%;
   height: 100%;
@@ -231,7 +226,7 @@
 .btn.buy-now {
   background-color: #A0AF4C;
   border: none;
-  color: white !important; 
+  color: white; 
 }
 
 .buy-now:hover{
@@ -318,7 +313,7 @@
 .buttons {
   margin-top: 15px;
   display: flex;
-  gap: 15px;
+  gap: 2rem;
 }
 
 .btn {
@@ -331,14 +326,16 @@
 
 .buy-now {
   background-color: #a0af4c;
-  color: black;
   border: none;
+  display: flex;
+  align-items: center!important;
 }
 
 .learn-more {
   background-color: transparent;
-  border: 2px solid #a0af4c;
+  border: 4px solid #a0af4c;
   color: black;
+  padding: 0.4rem 2rem !important;
 }
 
 .plant-section {
@@ -403,7 +400,7 @@
 }
 
 .plt-care-img2 img {
-  height: 24.6em;
+  height: 23.4rem;
 }
 
 .plt-care-para1 p, .plt-care-para2 p {
@@ -443,6 +440,60 @@
     margin-left: 4rem;
     margin-right: 4rem !important;
   }
+
+  .link {
+    margin: 16px 0;
+    font-size: 24px;
+    color: black;
+    font-family: "GilroyRegular";
+    margin-top: -2.5rem;
+  }
+  
+  .link p {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .link a {
+    color: black; 
+    text-decoration: none;
+    margin-right: 0.7rem;
+  }
+  
+  .link a:hover {
+    color: #514e4e;
+  }
+  
+  .link span {
+    color: black;
+    margin-left: 0.7rem;
+  }
+
+  .link-our-ser {
+    margin-bottom: -2rem !important;
+    margin-top: 0.2rem !important;
+  }
+
+  .link-contact {
+    width: 90%;
+    margin: 0.1rem 0 !important;
+    margin-left: 0.1rem !important;
+  }
+
+  .line-contact {
+    width: 90% !important;
+  }
+
+  .line-header  {
+    width: 100%;
+    border: 1px solid #141A18;
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+    margin-left: -0.1rem;
+    
+  }
+  
    
   .header-image, .footer-image {
     width: 100%;
@@ -705,5 +756,4 @@
     width: 313px;
     height: 29px;
     margin-bottom: 1.2rem;
-    /* margin-left: 1.8rem; */
   }

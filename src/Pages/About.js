@@ -3,16 +3,19 @@ import about_header from "../images/about_header.jfif";
 import about_footer from "../images/service_garden.jfif";
 import About_Pot from "../images/About_Pot.jpeg";
 import About_plant from "../images/About_plant.jpeg";
+import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
     <div className="about-page">
       <div className="container">
-        {/* <div className="link">
-        <p>
-          <Link to="/">Home</Link> &gt; <span>About Us</span>
-        </p>
-        </div> */}
+        <div className="link">
+          <p>
+            <Link to="/home">Home</Link> &gt; <span>About Us</span>
+          </p>
+        </div>
+
+        <div className="line-header"></div>
         
         <img src= {about_header} alt="Garden" className="header-image" />
         
