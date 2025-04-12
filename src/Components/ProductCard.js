@@ -4,8 +4,8 @@ import "./ProductCard.css";
 import "./Resp.css";
 
 const ProductCard = ({ product }) => {
-  // const productURL = `http://test.qsofte.com/product/${product.id}`;
-  const productURL = `http://localhost:3000/product/${product.id}`;
+  const productURL = `http://test.qsofte.com/product/${product.id}`;
+  // const productURL = `http://localhost:3000/product/${product.id}`;
 
   return (
     <div className="product-card">
