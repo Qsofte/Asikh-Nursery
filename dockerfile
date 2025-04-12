@@ -8,7 +8,7 @@ WORKDIR /Asikh-Nursery
 COPY package*.json ./
 
 # Step 4: Install the project dependencies
-RUN npm install
+RUN npm install --legacy-peer-deps
 
 RUN npm install -g serve
 

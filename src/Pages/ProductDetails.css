@@ -1,0 +1,96 @@
+@font-face {
+    font-family: "GilroyLight";
+    src: url("../fonts/Gilroy-Light.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "GilroyRegular";
+    src: url("../fonts/Gilroy-Regular.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "GilroySemiBold";
+    src: url("../fonts/Gilroy-SemiBold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+  }
+
+
+.prdt-open-card-qr {
+    width: 50%;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    text-align: center;
+    margin-bottom: 8rem;
+  }
+  
+  .prdt-open-name-qr {
+    font-size: 2.5rem;
+    color: black;
+    margin-bottom: 1rem;
+    font-family: "gilroysemibold";
+  }
+  
+  .prdt-opn-img-qr {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .prdt-open-description-qr {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    color: black;
+    font-family: "gilroyregular";
+    text-align: left;
+  }
+  
+  .prdt-open-price-qr {
+    font-size: 1.5rem;
+    color: black;
+    font-family: "gilroysemibold";
+    text-align: left;
+  }
+  
+  
+/* Mobile */
+
+@media (max-width: 768px) {
+    .prdt-open-card-qr {
+      width: 90%;
+      padding: 1rem;
+    }
+  
+    .prdt-open-name-qr {
+      font-size: 1.5rem;
+      font-family: "gilroysemibold";
+    }
+  
+    .prdt-opn-img-qr {
+        width: 80%;
+        height: 40vh;
+        object-fit: cover;
+    }
+  
+    .prdt-open-description-qr, .prdt-open-price-qr {
+      font-size: 1.2rem;
+      font-family: "gilroyregular";
+      text-align: left;
+      color: black;
+    }
+
+    .prdt-open-price-qr {
+        font-family: "gilroysemibold";
+    }
+  }
+  

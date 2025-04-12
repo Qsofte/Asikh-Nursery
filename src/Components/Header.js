@@ -26,8 +26,8 @@ function Header() {
         <a className="sections" href="/order">Order Now</a>
         <span className="divider">|</span>
         <a className="sections" href="/contact">Contact Us</a> 
-        {/* <span className="divider">|</span> */}
-        {/* <a className="sections" href="/products">Products</a>  */}
+        <span className="divider">|</span>
+        <a className="sections" href="/products">Products</a> 
       </nav>
 
       <div className="whatsapp-container">
