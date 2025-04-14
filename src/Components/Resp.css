@@ -111,10 +111,7 @@
     }
 
     .footer-banner {
-      height: 80px;
-      padding: 0 !important;
-      margin-top: -3.7rem !important;
-      /* z-index: ; */
+      display: none !important;
     }
 
   }

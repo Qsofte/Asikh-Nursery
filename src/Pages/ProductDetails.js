@@ -30,8 +30,9 @@ const ProductDetails = () => {
     <div className="prdt-open-card-qr">
       <h1 className="prdt-open-name-qr">{product.name}</h1>
       <img src={product.image} alt={product.name} className="prdt-opn-img-qr"/>
+      <h1 className="prdt-open-name-qr-mob">{product.name}</h1>
       <p className="prdt-open-description-qr">{product.description}</p>
-      <p className="prdt-open-price-qr"><b>Price: </b>{product.price}</p>
+      <p className="prdt-open-price-qr"><b>₹ </b>{product.price}</p>
     </div>
   );
 };
