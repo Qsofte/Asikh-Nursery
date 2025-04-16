@@ -6,15 +6,8 @@ import tools from '../images/Tools.png';
 import flowers from '../images/Flower.jpeg';
 import homePic1 from "../images/home-pic-1.jpeg";
 import homePic2 from "../images/home-pic-2.png";
-// import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-
-  // const navigate = useNavigate();
-
-  // const handleClick = () => {
-  //   navigate("/order");
-  // }
 
   return (
     <>

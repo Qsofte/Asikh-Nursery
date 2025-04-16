@@ -41,7 +41,7 @@ function Header() {
         </a>
       </div>
 
-      <div className="menu-icon" onClick={() => setIsOpen(!isOpen)}>
+      <div className="menu-icon"   data-testid="menu-icon" onClick={() => setIsOpen(!isOpen)}>
         <span className="bar"></span>
         <span className="bar"></span>
         <span className="bar"></span>
