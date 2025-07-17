@@ -1,18 +1,24 @@
 import React from "react";
 import "./OrderNow.css";
 import "./OrderResponsive.css";
-import Asparagus from "../ImageProducts/Asparagus.jfif";
-import RangonChinese from "../ImageProducts/RangonChinese.jfif";
-import TableKaini from "../ImageProducts/TableKaini.jfif";
+import Asparagus from "../ImageProducts/Asparagus.jpg";
+import RangonChinese from "../ImageProducts/RangonChinese.jpg";
+// import ShatavariPlant from "../ImageProducts/ShatavariPlant.jpg";
+import TableKaini from "../ImageProducts/TableKaini.jpg";
 import Araucariya5 from "../ImageProducts/Araucariya5.jpeg";
-import BonsaiFicus35cm from "../ImageProducts/BonsaiFicus35cm.jpeg";
+import BonsaiFicus35cm from "../ImageProducts/BonsaiFicus35cm.jpg";
 import GoldenShrimp from "../ImageProducts/GoldenShrimp.jpeg";
-import greenyonSyngonium from "../ImageProducts/greenyonSyngonium.jpeg";
-import LuckyBamboo from "../ImageProducts/LuckyBamboo.jpeg";
+import greenyonSyngonium from "../ImageProducts/greenyonSyngonium.jpg";
+import LuckyBamboo from "../ImageProducts/LuckyBamboo.jpg";
 import MoneyPlant from "../ImageProducts/MoneyPlant.jpeg";
 import OrhulPune from "../ImageProducts/OrhulPune.jpeg";
 import RubberPlant from "../ImageProducts/RubberPlant.jpeg";
-import ShatavariPlant from "../ImageProducts/ShatavariPlant.jpeg";
+import ShatavariPlant from "../ImageProducts/ShatavariPlant.jpg";
+import DwarfRedNirum from "../ImageProducts/DwarfRedNirum.jpg";
+import OrhulJabaMix from "../ImageProducts/OrhulJabaMix.jpg";
+import MadhuMalti from "../ImageProducts/MadhuMalti.jpg";
+import Rose from "../ImageProducts/Rose.jpg";
+
 
 const products = [
   {
@@ -86,6 +92,30 @@ const products = [
     name: "Shatavari Plant",
     price: 100,
     image: ShatavariPlant,
+  },
+  {
+    id: 13,
+    name: "Dwarf Red Nirum",
+    price: 100,
+    image: DwarfRedNirum,
+  },
+  {
+    id: 14,
+    name: "Orhul Jaba Mix7''",
+    price: 100,
+    image: OrhulJabaMix,
+  },
+  {
+    id: 15,
+    name: "Madhu Malti",
+    price: 100,
+    image: MadhuMalti,
+  },
+  {
+    id: 16,
+    name: "Rose",
+    price: 100,
+    image: Rose,
   },
 ];
 
